@@ -3,12 +3,27 @@
 @import "utils/mixins";
 @import "utils/fonts";
 
+::selection {
+  color:white;
+  background: #000;
+}
+
 html {
   font-size: $base-font-size;
   height: 100%;
 }
 
-body { height: 100%; }
+body { 
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  margin: 0;
+}
+
+nav {
+  position: relative;
+  background-color: $grey;
+}
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
@@ -18,7 +33,7 @@ ul, li {
   padding: 0;
 }
 
-a { text-decoration: none; }
+a { text-decoration: none;color: inherit; }
 
 p { margin: 0; }
 
@@ -30,7 +45,15 @@ svg,
 video,
 textarea { vertical-align: middle; }
 
-textarea { resize: none; }
+textarea { 
+  resize: none;
+  font-family: inherit;
+}
+
+textarea:focus::-webkit-input-placeholder, 
+input:focus::-webkit-input-placeholder { color: transparent; }
+
+// TODO nice animation for placeholders, use lable, position:absolute and input:valid (maybe)
 
 section { position: relative; }
 
@@ -41,9 +64,10 @@ button { outline: none; }
 *, *:before, *:after { box-sizing: border-box; }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  //flex-direction: column;
   height: 100%;
+  padding: 2% 3%;
 }
 
 .content { flex: 1 0 auto; }
@@ -53,6 +77,47 @@ button { outline: none; }
   max-width: $content-size;
   width: 100%;
 }
+
+
+/* main_scr */
+.main_scr{
+  height:calc(100vh + 80px);
+  position: relative;
+}
+.main_scr .bg{
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cc/R62_subway_car_interior_black_and_white.jpg');
+  background-size: cover;
+  filter:blur(1px);
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.front{
+  position: relative;
+  z-index: 100;
+  margin: calc((100vh - 40vw)/2) 0;
+  padding:20px 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,.3), rgba(255,255,255,0));
+}
+.title_name, .sub_title, .social{
+  width:fit-content;
+  margin:0 auto;
+}
+.title_name{
+  font-size: 35vw;
+  font-weight: bold;
+}
+.social{
+  display: flex;
+  padding-top:15px;
+}
+.social > a > svg{
+  zoom:2;
+  margin:0 5px;
+}
+/* end of main_scr */
 
 //Модули
 @import "modules/modules";
