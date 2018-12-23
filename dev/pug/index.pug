@@ -16,17 +16,8 @@ block content
 					.fab.fa-vk
 				a.show_popup(href="#")
 					.fa.fa-envelope
-	section.popup
-		.popup_bg
-		.popup_form
-			.close_icon
-				.fas.fa-times-circle
-			.cont
-				form(action="/mail.php" metod="post")
-					input(type="text" required="true" name="email" placeholder="Email")
-					input(type="text" required="true" name="subject" placeholder="Subject")
-					textarea(type="text" required="true" name="offer" placeholder="Your awsome job!" rows="5")
-					button.form_btn(type="submit") Send
+
+	include ./modules/popup/popup
 block scripts
 	script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
 	script(defer src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" integrity="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ" crossorigin="anonymous")

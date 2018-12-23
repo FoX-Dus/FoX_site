@@ -31,10 +31,23 @@
     "gulp-svgmin": "^2.1.0",
     "gulp-uglify": "^3.0.1",
     "imagemin-jpeg-recompress": "^5.1.0",
-    "imagemin-pngquant": "^6.0.0"
+    "imagemin-pngquant": "^6.0.0",
+    "nodemon": "^1.18.9"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0",
     "normalize.css": "^8.0.0",
     "svg4everybody": "^2.1.9"
+  },
+  "scripts": {
+    "start": "node ../FoX_site/server/app.js",
+    "dev": "nodemon ../FoX_site/server/app.js"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "./server"
+    ]
   }
 }

@@ -1,0 +1,11 @@
+section.popup
+	.popup_bg
+	.popup_form
+		.close_icon
+			.fas.fa-times-circle
+		.cont
+			form(metod="POST" action="form_offer")
+				input(type="text" required="true" name="email" placeholder="Email")
+				input(type="text" required="true" name="subject" placeholder="Subject")
+				textarea(type="text" required="true" name="offer" placeholder="Your awsome job!" rows="5")
+				button.form_btn(type="submit") Send
