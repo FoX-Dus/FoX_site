@@ -1,29 +1,34 @@
-const express = require('express')
-const path = require('path')
-const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const keys = require('./keys')
+const express = require('express');
+const path = require('path');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const keys = require('./keys');
 
-const port = process.env.PORT || 3000
-const app = express()
-const clientPath = path.join(__dirname,'..', 'build')
+const port = process.env.PORT || 3000;
+const app = express();
+const clientPath = path.join('build');
 
-const dbConn = mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
-	.then(() => console.log(`mongoDB connected`))
-	.catch(err => console.log(err))
+// Connecting to DB
+// const dbConn = mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
+// 	.then(() => console.log(`mongoDB connected`))
+// 	.catch(err => console.log(err))
 
-app.use(express.static(clientPath))
-app.listen(port, () => {
-	console.log(`Server started on port ${port}`)})
+// Set static path for express
+app.use(express.static(clientPath));
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+// Body-parser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-// app.get('/', (req, res) => {
-// 	res.send('Hello')
-// })
+app.post('/send', (req, res) => {
+  
 
-// app.post('/', function (req, res) {
+
+  console.log('POST sucsess!');
+  res.send(200);
+});
+
+// app.post('/form_offer', function (req, res) {
 //     	var email = req.body.email
 //     	console.log('email')
 
@@ -33,3 +38,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 //     // });    
 //     // res.send('Data received:\n' + JSON.stringify(req.body));
 // });
+
+app.listen(port, () => {
+	console.log(`Server started on port ${port}`)})

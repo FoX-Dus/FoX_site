@@ -4,8 +4,8 @@ section.popup
 		.close_icon
 			.fas.fa-times-circle
 		.cont
-			form(metod="POST" action="form_offer")
-				input(type="text" required="true" name="email" placeholder="Email")
-				input(type="text" required="true" name="subject" placeholder="Subject")
-				textarea(type="text" required="true" name="offer" placeholder="Your awsome job!" rows="5")
+			form(method="POST" action="send")
+				input(type="text" name="name" placeholder="Name" required="true")
+				input(type="email" name="email" placeholder="Email" required="true")
+				textarea(type="text" name="offer" placeholder="Your awsome job!" rows="5" required="true")
 				button.form_btn(type="submit") Send
