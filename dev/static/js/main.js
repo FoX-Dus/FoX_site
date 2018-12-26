@@ -72,4 +72,19 @@ $("body").click(function(e){
   console.log(e.target.classList);
    $('.popup').removeClass('visible')  
 })
+
+//Send form data
+$('form').submit((e) => {
+  e.preventDefault();
+
+  let formData = $('form').serialize();
+
+  $.ajax({
+    type: 'POST',
+    url: $('form').attr('action'),
+    data: formData,
+    success: () => { console.log('Data sent') }
+  });
+});
+
 // -----------------------------
