@@ -83,8 +83,10 @@ $('form').submit((e) => {
     type: 'POST',
     url: $('form').attr('action'),
     data: formData,
-    success: () => { console.log('Data sent') }
+    success: (xhr, statusCode, textStatus) => { console.log(textStatus.status) },
+    complete: (xhr, statusCode, textStatus) => { console.log(xhr.status) } 
   });
 });
+
 
 // -----------------------------

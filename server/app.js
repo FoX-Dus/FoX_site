@@ -21,20 +21,32 @@ app.use(express.static(clientPath))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+// Take Data from form
 app.post('/send', async (req, res) => {
-  console.log('POST sucsess!' + JSON.stringify(req.body))
   
   let formData = {
   	name: req.body.name,
   	email: req.body.email,
   	offer: req.body.offer
   }
-
+  
+  // Create new entry
   let offer = new Offer(formData)
-
   await offer.save()
-  res.status(201)
+  
+  offerSchema.post('save', (err, doc, next) => { next(err) })
+
+  // for safety delete id
+  let offerObj = offer.toJSON()
+  delete offerObj._id;
+
+  // send OK response
+  res.status(201).send()
 });
 
-app.listen(port, () => {
-	console.log(`Server started on port ${port}`)})
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+app.listen(port, () => { console.log(`Server started on port ${port}`) })

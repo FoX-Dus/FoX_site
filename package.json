@@ -32,13 +32,14 @@
     "gulp-uglify": "^3.0.1",
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^6.0.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.10"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.0",
     "normalize.css": "^8.0.0",
+    "npm": "^6.9.0",
     "svg4everybody": "^2.1.9"
   },
   "scripts": {
