@@ -1,0 +1,36 @@
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title StarNight
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+		link(rel="stylesheet" type='text/css' href="../../static/css/styles.css")
+		link(rel="stylesheet" type='text/css' href="../../static/css/starnight.css")
+
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body
+		include ../../modules/header/header
+
+		.content
+			.section.main
+				.container
+					.title Starnight App
+					.sub-title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga necessitatibus quasi excepturi sed est totam sequi numquam voluptas, unde explicabo sapiente. Deserunt veniam ipsum incidunt soluta consequuntur ex iste minima!
+					a.play-btn.show_popup(href="#")
+						i.far.fa-play-circle
+					a.btn.start-btn(href="#") Get Started
+
+			.section.seethesky
+
+		include ../../modules/footer/footer
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	//- <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+	<script src="../../static/js/libs.min.js"></script>
+	<script src="../../static/js/main.js"></script>

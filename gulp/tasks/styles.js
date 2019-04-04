@@ -12,7 +12,7 @@ let plumber = require('gulp-plumber'),
 
 module.exports = function () {
     $.gulp.task('styles:dev', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.scss')
+        return $.gulp.src(stylesPATH.input + '*.scss')
             .pipe(plumber())
             .pipe(sourcemaps.init())
             .pipe(scss())
@@ -20,12 +20,12 @@ module.exports = function () {
                 browsers: ['last 3 version']
             }))
             .pipe(sourcemaps.write())
-            .pipe(rename('styles.min.css'))
+            //.pipe(rename('styles.min.css'))
             .pipe($.gulp.dest(stylesPATH.ouput))
             .on('end', $.browserSync.reload);
     });
     $.gulp.task('styles:build', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.scss')
+        return $.gulp.src(stylesPATH.input + '*.scss')
             .pipe(scss())
             .pipe(autoprefixer({
                 browsers: ['last 3 version']
@@ -34,14 +34,14 @@ module.exports = function () {
             .pipe($.gulp.dest(stylesPATH.ouput))
     });
     $.gulp.task('styles:build-min', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.scss')
+        return $.gulp.src(stylesPATH.input + '*.scss')
             .pipe(scss())
             .pipe(autoprefixer({
                 browsers: ['last 3 version']
             }))
             .pipe(csscomb())
             .pipe(csso())
-            .pipe(rename('styles.min.css'))
+            //.pipe(rename('styles.min.css'))
             .pipe($.gulp.dest(stylesPATH.ouput))
     });
 };

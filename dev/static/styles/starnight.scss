@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Lato light';
+  src: url('../fonts/Lato-Light.ttf')  format('truetype')};
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Italic.ttf')  format('truetype'); font-style: italic;};
+
+//Colors
+$white: #ffffff;
+$black: #000000;
+
+//Vars
+$base-font-size: 16px;
+$base-line-height:.8;
+
+.content{
+  font-family: 'Lato light';
+  font-size: $base-font-size !important;
+}
+
+.section{
+  position: relative;
+}
+
+.container{
+  width: 96%;
+  margin: 0 auto;
+}
+
+.btn{
+  font-family: 'Lato';
+  padding: 25px 60px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.41);
+}
+
+// main screen
+.main .container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/content/starnight/Galaxy_red.png);
+  background-size: cover;  
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: $white;
+}
+.title{
+  font-size: 3.75rem;
+  width: fit-content;
+  max-width: 100%;
+  padding-top: 180px;
+  @media screen and (max-width: 450px) and (max-height:600px) {
+    font-size: 2.75rem;
+    padding-top: 40px;
+  }
+}
+.sub-title{
+  font-family: 'Lato';
+  width: 40vw;
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
+  padding-top: 25px;
+}
+.play-btn{
+  padding: 70px 0;
+  font-size: 83px;
+}
+.start-btn{
+  position: absolute;
+  bottom: 60px;
+  background-color: rgb(122, 204, 200);
+}

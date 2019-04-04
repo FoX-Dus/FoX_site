@@ -3,7 +3,10 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const keys = require('./keys');
-const Offer = require('./models/Offer')
+const Offer = require('./models/Offer');
+
+// offerShema not defined!!!
+//console.log(mongoose.model('offers', offerSchema))
 
 const port = process.env.PORT || 3000
 const app = express()

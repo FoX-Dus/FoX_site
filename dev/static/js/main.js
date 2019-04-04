@@ -69,7 +69,7 @@ $("body").click(function(e){
   var closeClassList = ['popup_bg', 'close_icon', 'svg-inline--fa'];
 //   TODO repair close icon classList[0] 
   if(!closeClassList.includes(e.target.classList[0]))return true
-  console.log(e.target.classList);
+  //console.log(e.target.classList);
    $('.popup').removeClass('visible')  
 })
 
