@@ -9,3 +9,15 @@
   ::-moz-placeholder          {@content}
   :-ms-input-placeholder      {@content}
 }
+
+@mixin breakpoint($a) {
+	@if $a == 'phone' {
+		@media screen and (max-width: 480px) and (max-height:600px) { @content }
+	}
+	@else if $a == 'tablet' {
+		@media screen and (max-width: 768px) { @content }
+	}
+	@else if $a == 'desktop'{
+		@media screen and (max-width: 1248px) { @content }
+	}
+}

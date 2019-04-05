@@ -20,17 +20,39 @@ html(lang="ru-RU")
 
 		.content
 			.section.main
-				.container
-					.title Starnight App
-					.sub-title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga necessitatibus quasi excepturi sed est totam sequi numquam voluptas, unde explicabo sapiente. Deserunt veniam ipsum incidunt soluta consequuntur ex iste minima!
+				.wrapper
+					.title.title--main
+						h1 Starnight App
+					.sub-title 
+						h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga necessitatibus quasi excepturi sed est totam sequi numquam voluptas, unde explicabo sapiente. Deserunt veniam ipsum incidunt soluta consequuntur ex iste minima!
 					a.play-btn.show_popup(href="#")
 						i.far.fa-play-circle
-					a.btn.start-btn(href="#") Get Started
+					a.btn.btn__start(href="#") Get Started
+					.popup
+						.popup_bg
+						.popup_form
+							iframe(width="100%" height="400px" src="https://www.youtube.com/embed/hHW1oY26kxQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
 			.section.seethesky
+				.conteiner.white
+					.cont-text
+						.title
+							h1  See the sky even better than yout own eyes can
+						.text
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores veritatis, eius quis voluptate nihil sapiente sit libero dignissimos, saepe, iure fugit modi recusandae repellendus aperiam. Eveniet consequuntur soluta praesentium illum.
+							p Esse, praesentium hic rerum cupiditate laborum! Accusamus, beatae, quae reiciendis numquam, labore dolor neque soluta impedit dolorum, illo corrupti culpa iusto dicta nemo. Laudantium, itaque.
+						a.btn.btn__transparent.btn__white(href="#") Download Now
+					.cont-img
+						.circle-1
+							img(src="../../static/images/content/starnight/circles.png")
+						.circle-2
+							img(src="../../static/images/content/starnight/circles.png")
+						.ipad
+							img(src="../../static/images/content/starnight/ipad.png" alt=ipad)
+
+			.section.next
 
 		include ../../modules/footer/footer
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	//- <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
 	<script src="../../static/js/libs.min.js"></script>
 	<script src="../../static/js/main.js"></script>
