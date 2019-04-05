@@ -84,9 +84,19 @@ $('form').submit((e) => {
     url: $('form').attr('action'),
     data: formData,
     success: (xhr, statusCode, textStatus) => { console.log(textStatus.status) },
-    complete: (xhr, statusCode, textStatus) => { console.log(xhr.status) } 
+    complete: (xhr, statusCode, textStatus) => {
+      console.log(xhr.status);
+
+      if (xhr.status == 201) {
+        $('.popup_form .cont form').remove();
+        $('.cont').html('<div class="form_result">Your offer was succesfuly sent. Thank you! :)</div>');
+      }
+      else {
+        $('.popup_form .cont form').remove();
+        $('.cont').html('<div class="form_result">Something went wrong :( Contact me on socials.</div>');
+      }
+    }
   });
 });
-
 
 // -----------------------------

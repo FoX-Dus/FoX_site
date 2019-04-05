@@ -5,9 +5,6 @@ const bodyParser = require('body-parser');
 const keys = require('./keys');
 const Offer = require('./models/Offer');
 
-// offerShema not defined!!!
-//console.log(mongoose.model('offers', offerSchema))
-
 const port = process.env.PORT || 3000
 const app = express()
 const clientPath = path.join('build')
@@ -37,7 +34,8 @@ app.post('/send', async (req, res) => {
   let offer = new Offer(formData)
   await offer.save()
   
-  offerSchema.post('save', (err, doc, next) => { next(err) })
+  // don't know why it's for
+  //offerSchema.post('save', (err, doc, next) => { next(err) })
 
   // for safety delete id
   let offerObj = offer.toJSON()
