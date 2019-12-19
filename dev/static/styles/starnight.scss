@@ -1,4 +1,7 @@
-@import 'utils/mixins.scss';
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "modules/modules";
 
 @font-face {
   font-family: 'Lato light';
@@ -9,8 +12,6 @@
   src: url('../fonts/Lato-Italic.ttf')  format('truetype'); font-style: italic;};
 
 //Colors
-$white: #ffffff;
-$black: #000000;
 $yellow: #e8b968;
 
 //Vars
@@ -23,7 +24,29 @@ h1{ font-size: 3.75rem;
   }
 }
 
-h5{ font-size: 1rem; }
+h5{ font-size: 1rem;font-weight: 500;}
+
+/* scroll bar */
+
+body::-webkit-scrollbar-track
+{
+  border-radius: 10px;
+  background-color: #373b44;
+}
+
+body::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #373b44;
+}
+
+body::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 12px rgba(0,0,0,.3);
+  background-color: $yellow;
+}
+/* --- */
 
 .content{
   font-family: 'Lato light';

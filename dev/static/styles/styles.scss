@@ -144,4 +144,9 @@ button { outline: none; }
 }
 
 //Модули
-@import "modules/modules";
+@import "modules/buttons/buttons";
+/* @import "modules/footer/footer"; */
+@import "modules/header/header";
+@import "modules/navigation/navigation";
+@import "modules/small-blocks/small-blocks";
+@import "modules/popup/popup";
