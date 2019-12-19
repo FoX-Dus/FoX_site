@@ -73,7 +73,6 @@ nav ul li { display: inline; }
   top:20px;
   content: "Menu";
   color: $white;
-  background-color: $grey;
   border-radius:50%;
   width: 50px;
   height: 50px;
@@ -86,7 +85,7 @@ nav ul li { display: inline; }
   z-index: 1000;
   width:25px;
   height:3px;
-  background-color: $black;
+  background-color: $white06;
 }
 
 .b_menu{
@@ -105,10 +104,12 @@ nav ul li { display: inline; }
 .menu-icon.shown .b_menu:after{
   transform:rotate(45deg);
   top:0;
+  background-color: $black;
 }
 .menu-icon.shown .b_menu:before{
   transform:rotate(-45deg);
   top:0;
+  background-color: $black;
 }
 .b_menu, .b_menu:before, .b_menu:after{
   transition:all ease .3s;
