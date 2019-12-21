@@ -2,3 +2,4 @@ node_modules
 build
 .idea
 server/keys.js
+yarn.lock
