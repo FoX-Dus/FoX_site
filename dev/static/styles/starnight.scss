@@ -14,6 +14,7 @@
 //Colors
 $yellow: #e8b968;
 $red:#f69679;
+$green:#7accc8;
 $grey2:#d0d9e2;
 $grey3:#9197a8;
 
@@ -26,10 +27,10 @@ h1{ font-size: 3.75rem;
     font-size: 2.75rem;
   }
 }
-
+h2{ font-size: 45px;font-family: 'Lato Light';color: $grey3; font-weight: 100;}
 h5{ font-size: 1rem;font-weight: 500; }
-h6{ font-size: 15px;font-weight: bold;color: $grey3;}
-p{ font-size: 16px; }
+h6{ font-size: 15px;font-weight: bold;color: $grey3;text-transform: uppercase;letter-spacing: 3px;}
+p{ font-size: 16px; font-family: 'Lato Light';line-height: 1.4;}
 
 /* scroll bar */
 
@@ -230,11 +231,6 @@ body::-webkit-scrollbar-thumb
     padding-bottom: 80px;
     }
 
-    & h6{
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-
     & p{
       color: $grey3;
       line-height: 30px;
@@ -248,5 +244,71 @@ body::-webkit-scrollbar-thumb
     background-color: $grey2;
     border-radius: 1px;
     opacity: .4;
+  }
+}
+
+.extra{
+  background-color: $grey2;
+
+  .cont{
+    display: flex;
+
+    .card{
+      width: 340px;
+      background-color: $white;
+
+      .photo{
+        width: 100%;
+        height: 350px;
+        background-color: $yellow;
+      }
+
+      .text-cont {
+        padding: 15px;
+
+        & p{font-style: italic;}
+      }
+    }
+  }
+
+  .text{
+    width: 415px;
+    color: $grey3;
+    margin-left: 70px;
+  }
+
+}
+
+.down{
+  background-color: $green;
+  color: $white;
+
+  .cont{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+
+    .text{
+      max-width: 95%;
+      width: 400px;
+
+      & p{padding-top: 0;}
+    }
+
+    .map{
+      & li{padding-bottom: 10px;}
+    }
+  }
+
+  .logo{
+    width: fit-content;
+    margin:0 auto;
+  }
+
+  .site{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 40px;
   }
 }
